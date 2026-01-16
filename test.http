@@ -1,0 +1,23 @@
+### Get posts
+GET http://localhost:8080/posts
+
+### Create post
+POST http://localhost:8080/posts
+Content-Type: application/json
+
+{
+  "title": "{{$random.book.title}}"
+}
+
+### Update post
+PUT http://localhost:8080/posts/{{$random.integer(1,100)}}
+Content-Type: application/json
+
+{
+  "title": "{{$random.book.title}}"
+}
+
+### Delete post
+DELETE http://localhost:8080/posts/{{$random.integer(1,100)}}
+
+###
